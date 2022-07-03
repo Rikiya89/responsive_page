@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+
+body {
+    font-family:
+        'Roboto',
+        "Helvetica Neue",
+        Arial,
+        "Hiragino Kaku Gothic ProN",
+        "Hiragino Sans",
+        Meiryo,
+        sans-serif;
+    background-color: #eee;
+    color: #222;
+    letter-spacing: 0.1em;
+}
+
+.container {
+    overflow: hidden;
+}
+.main-nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.main-nav ul li {
+    ;
+}
+
+/* =============hamburger=========== */
+.hamburger{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+/* General styles for the lines */
+.hamburger .line{
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: ;
+    margin-block: 10px; /*バラバラのボタンとボタンを追加する*/
+    border-radius: 4px;
+    transition: transform .5s,
+    opacity .25s;
+}
+/* 線を個別にボタンがアクティブ時に別々のエフェクトを加える*/
+.hamburger.active .line:nth-child(1){
+    transform: translateY(13px)
+    rotate(45deg); /*下に下がる線が１３pxで角度が４５度のxを作る*/
+}
+.hamburger.active .line:nth-child(2){
+    opacity: 0; /*線を隠す*/
+}
+.hamburger.active .line:nth-child(3){
+    transform: translateY(-13px)
+    rotate(-45deg); /*下に下がる線が１３pxで角度が-４５度のxを作る*/
+}  

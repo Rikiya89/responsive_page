@@ -1,8 +1,12 @@
-const hamburgerMenu = document.querySelector('.hamburger'); //ハンバーガークラスを習得する.
-//アロー関数をクラスをアクティブにする為に作成する.
-const menuIsActive = () => {
-    //ハンバーガーメニュークラスを選んで、アクティブクリッククラスを追加と削除をする.
-    hamburgerMenu.classList.toggle('active');
-};
-//クリックのイベントリスナーをハンバーガーメニューに追加する そして　トグルのスイッチ切り替え。
-hamburgerMenu.addEventListener('click', menuIsActive);
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+})
+
+document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+    hamburger.addEventListener.remove("active");
+    navMenu.addEventListener.remove("active");
+}))

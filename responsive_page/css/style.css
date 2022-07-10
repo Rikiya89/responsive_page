@@ -4,8 +4,17 @@
     box-sizing: border-box;
 }
 
-ul {
+header {
+    background-color: white;
+}
+
+li {
     list-style: none;
+}
+
+a {
+    color: black;
+    text-decoration: none;
 }
 
 img {
@@ -23,52 +32,130 @@ body {
         "Hiragino Sans",
         Meiryo,
         sans-serif;
-    background-color: #eee;
-    color: #222;
+    background-color: white;
     letter-spacing: 0.1em;
 }
 
-.container {
-    overflow: hidden;
-}
-.main-nav{
+/* navigation */
+.navbar {
+    min-height: 70px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 1rem;
+    align-items: center;
+    padding: 0 24px;
 }
 
-.main-nav ul li {
-    ;
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
 }
 
-/* =============hamburger=========== */
-.hamburger{
-    background-color: transparent;
-    border: none;
-    outline: none;
+.nav-branding {
+    font-size: 2rem;
+}
+
+.nav-link {
+    transition: 0.7s ease;
+}
+
+.nav-link:hover {
+    color: dodgerblue;
+}
+
+/* hamburger */
+.hamburger {
+    display: none;
     cursor: pointer;
 }
-/* General styles for the lines */
-.hamburger .line{
+
+.line {
     display: block;
-    width: 40px;
+    width: 25px;
     height: 3px;
-    background-color: ;
-    margin-block: 10px; /*バラバラのボタンとボタンを追加する*/
-    border-radius: 4px;
-    transition: transform .5s,
-    opacity .25s;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: black;
 }
-/* 線を個別にボタンがアクティブ時に別々のエフェクトを加える*/
-.hamburger.active .line:nth-child(1){
-    transform: translateY(13px)
-    rotate(45deg); /*下に下がる線が１３pxで角度が４５度のxを作る*/
+
+.articleHeader {
+    background-color: lightcyan;
+    width: 100%;
+    height: 70vh;
+    padding: 36px;
+    position: relative;
+    background-image: url(../images/top_mv@2x.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
-.hamburger.active .line:nth-child(2){
-    opacity: 0; /*線を隠す*/
+
+.mainTitle{
+    font-size: 4.8rem;
+    color: white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-shadow: 0 1px 28px rgb(0 0 0 / 11%),0 1px 28px rgb(0 0 0 / 11%),0 1px 28px rgb(0 0 0 / 11%);
 }
-.hamburger.active .line:nth-child(3){
-    transform: translateY(-13px)
-    rotate(-45deg); /*下に下がる線が１３pxで角度が-４５度のxを作る*/
-}  
+
+.concept {
+    margin: 0%;
+}
+
+p.text {
+    margin: 50px;
+}
+
+/* resposive */
+
+@media screen and (max-width: 599px){
+    .articleHeader{
+        background-color: mistyrose;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .line:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .line:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-item {
+        margin: 16px 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+    .mainTitle {
+        font-size: 3.6rem;
+    }
+}

@@ -1,12 +1,15 @@
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
+'use strict';
+{
+    $(function () {
+        $('.hamburger').on('click', function () {
+            $(this).toggleClass('active');
+            $('.globalNav').toggleClass('active');
+        });
 
-hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    navMenu.classList.toggle("active");
-})
+        $('.globalNav__item a').on('click', function () {
+            $('.hamburger').removeClass('active');
+            $('.globalNav').removeClass('active');
+        });
+    });
 
-document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
-    hamburger.addEventListener.remove("active");
-    navMenu.addEventListener.remove("active");
-}))
+}

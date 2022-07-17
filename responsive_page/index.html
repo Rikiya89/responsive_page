@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="jp">
+<html lang="ja">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="responsive_page">
-    <title>responsive_page</title>
+    <meta name="description" content="サイトの説明120文字程度">
+    <title>レスポンシブサンプル</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,57 +17,122 @@
 </head>
 
 <body>
-    <!-- ヘッダー部分 -->
-    <header id="page-header">
-        <nav class="navbar">
-            <a href="#" class="nav-branding">logo</a>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="company" class="nav-link">Company</a>
-                </li>
-                <li class="nav-item">
-                    <a href="service" class="nav-link">Service</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#recruit" class="nav-link">Recruit</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
-            </ul>
-            <div class="hamburger">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
+    <div class="container">
+        <header class="siteHeader">
+            <div class="inner">
+                <h1 class="logo">Sample</h1>
+                <nav class="globalNav">
+                    <ul class="globalNav__list">
+                        <li class="globalNav__item"><a href="#">Company</a></li>
+                        <li class="globalNav__item"><a href="#">Service</a></li>
+                        <li class="globalNav__item"><a href="#">Recruit</a></li>
+                        <li class="globalNav__item"><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
-        </nav>
-
-    </header>
-    <main>
-        <!-- tent -->
-        <article>
-            <header class="articleHeader">
-                <h2 class="mainTitle">"To be a Web designer."
-                    <span class="subTitle">Talk over dinner for now</span>
-                </h2>
-
-            </header>
-        </article>
-        <div>
-            <section id="concept">
-                <img src="images/top_thumb01@2x.jpg" alt="top_thumb01" class="car_park">
-                <p class="text">This is good place for camping and the adventure is watinfg for you.The car is brawn-ish
-                    and the tent is on the car. <br>This car is parking aside lake. The lake is not clean because the
-                    lake water color is deepgreen and I saw a mountain across the lake. I forgot a name of the
-                    mountain.But, it was so beautiful </p>
-            </section>
-        </div>
-
-        <section></section>
-        <section></section>
-    </main>
-    <footer></footer>
-    <script src="js/main.js"></script>
+        </header>
+        <main>
+            <article>
+                <header class="articleHeader">
+                    <h2 class="mainTitle">To be a Web designer.<span class="subTitle">Talk over dinner for now.</span>
+                    </h2>
+                </header>
+                ​
+                <section>
+                    <div class="inner flex flex--reverse">
+                        <ul class="image__list">
+                            <li class="image__item"><img src="images/top_thumb01@2x.jpg" alt=""></li>
+                            <li class="image__item"><img src="images/top_thumb02@2x.jpg" alt=""></li>
+                            <li class="image__item"><img src="images/top_thumb03@2x.jpg" alt=""></li>
+                        </ul>
+                        <div class="caption__main caption__main--right">
+                            <h2 class="topics">Concept</h2>
+                            <p class="text">
+                                texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext.<br>
+                                texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext.
+                            </p>
+                            <p class="text">
+                                texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext.<br>
+                                texttexttexttexttexttexttexttexttexttexttext.</p>
+                            ​
+                            <p class="text"><a href="#" class="link__text">&gt;&gt; to Concept</a></p>
+                        </div>
+                    </div>
+                </section>
+                ​
+                <section>
+                    <div class="inner flex">
+                        <div class="caption__main caption__main--left">
+                            <h2 class="topics">Local ingredients</h2>
+                            <p class="text">
+                                texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext.<br>
+                                texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext.
+                            </p>
+                            <p class="text">
+                                texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext.<br>
+                                texttexttexttexttexttexttexttexttexttexttext.</p>
+                            <p class="text"><a href="#" class="link__text">&gt;&gt; to Local ingredients</a></p>
+                        </div>
+                        <figure class="imageBox">
+                            <img class="image__thum" src="images/top_thumb04@2x.jpg" alt="vegetable">
+                        </figure>
+                    </div>
+                </section>
+                ​
+                <section>
+                    <div class="inner flex flex--reverse">
+                        <figure class="imageBox">
+                            <img src="images/top_thumb05@2x@2x.jpg" alt="">
+                        </figure>
+                        <div class="caption__main caption__main--right">
+                            <h2 class="topics">Grains</h2>
+                            <p class="text">
+                                texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext.<br>
+                                texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext.
+                            </p>
+                            <p class="text">
+                                texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext.<br>
+                                texttexttexttexttexttexttexttexttexttexttext.</p>
+                            <p class="text"><a href="#" class="link__text">&gt;&gt; to Grains</a></p>
+                        </div>
+                    </div>
+                </section>
+                ​
+                <section>
+                    <div class="inner flex">
+                        <div class="caption__main caption__main--left">
+                            <h2 class="topics">Lushly green</h2>
+                            <p class="text">
+                                texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext.<br>
+                                texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext.
+                            </p>
+                            <p class="text">
+                                texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext.<br>
+                                texttexttexttexttexttexttexttexttexttexttext.</p>
+                            <p class="text"><a href="#" class="link__text">&gt;&gt; to Lushly green</a></p>
+                        </div>
+                        <figure class="imageBox">
+                            <img src="images/top_thumb06@2x.jpg" alt="">
+                        </figure>
+                    </div>
+                </section>
+                ​
+                <footer class="contact">
+                    <a href="#" class="contact__btn">contact us</a>
+                </footer>
+            </article>
+        </main>
+        <footer class="siteFooter">
+            <p><small>&copy; 2022 attsu@hiroatsu.com</small></p>
+        </footer>
+    </div>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
+折りたたむ
